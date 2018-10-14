@@ -12,3 +12,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.userlist {
+  margin: 10;
+  margin-top: 50;
+  display: flex;
+  justify-content: space-around;
+}
+
+.userbox {
+  padding: 10;
+  border-style: solid;
+}
