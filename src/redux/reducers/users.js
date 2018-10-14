@@ -1,5 +1,8 @@
+// Used a "ducks" architecture https://github.com/erikras/ducks-modular-redux as the app is small
+
 export const initialState = {
-  list: []
+  list: [],
+  activeUser: {}
 };
 
 export const LOAD_USERS_REQUEST = 'users/LOAD_USERS_REQUEST';
@@ -22,11 +25,18 @@ export const loadUsers = () => {
     .catch(error => {
       console.error(error)
       dispatch({
-        type: LOAD_USERS_REQUEST
+        type: LOAD_USERS_FAILURE
       });
     });
   };
 };
+
+export const SELECT_ACTIVE_USER = 'users/SELECT_ACTIVE_USER';
+
+export const selectActiveUser = user => ({
+  user,
+  type: SELECT_ACTIVE_USER
+});
 
 export const users = (state = initialState, action) => {
   switch (action.type) {
@@ -35,6 +45,13 @@ export const users = (state = initialState, action) => {
       return {
         ...state,
         list: newUsers
+      }
+    }
+
+    case SELECT_ACTIVE_USER: {
+      return {
+        ...state,
+        activeUser: action.user
       }
     }
 

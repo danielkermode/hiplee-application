@@ -24,3 +24,8 @@ code {
   padding: 10;
   border-style: solid;
 }
+
+.activeuser {
+  display: flex;
+  justify-content: center;
+}
