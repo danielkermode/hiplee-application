@@ -14,18 +14,20 @@ code {
 }
 
 .userlist {
-  margin: 10;
-  margin-top: 50;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 2em;
 }
 
 .userbox {
-  padding: 10;
   border-style: solid;
 }
 
 .activeuser {
   display: flex;
   justify-content: center;
+}
+
+.buttoncontainer {
+  margin-bottom: 2em;
 }
