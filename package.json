@@ -1,0 +1,9 @@
+{
+  "name": "hiplee-application",
+  "version": "1.0.0",
+  "description": "Example code for Hiplee.",
+  "main": "index.js",
+  "repository": "git@github.com:danielkermode/hiplee-application.git",
+  "author": "Dan <danielkermode@hotmail.co.nz>",
+  "license": "MIT"
+}
